@@ -1,4 +1,4 @@
-Requirements
+## **Requirements**
 Order System (54 points)
 An order list is initialized. (2 points)
 
@@ -20,7 +20,7 @@ A match-case statement is used to check if the customer would like to keep order
 
 The match-case statement converts the use input to lowercase or uppercase before checking the case. (4 points)
 
-Order Receipt (46 points)
+## **Order Receipt (46 points)**
 A for loop is used to loop through the order list. (10 points)
 
 The value of each key in each order dictionary is saved as a variable. (6 points)
