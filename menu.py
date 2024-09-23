@@ -90,13 +90,13 @@ while place_order:
             if isinstance(value, dict):  # Handle sub-menus (like pizza or burgers)
                 for sub_key, sub_value in value.items():
                     item_name = f"{key} - {sub_key}"
-                    num_item_spaces = 24 - len(item_name)
+                    num_item_spaces = 26 - len(item_name)  # Adjusted for consistent spacing
                     item_spaces = " " * num_item_spaces
                     print(f"{i}      | {item_name}{item_spaces} | ${sub_value:.2f}")
                     menu_items[i] = {"Item name": item_name, "Price": sub_value}
                     i += 1
             else:  # Handle regular items
-                num_item_spaces = 24 - len(key)
+                num_item_spaces = 26 - len(key)  # Adjusted for consistent spacing
                 item_spaces = " " * num_item_spaces
                 print(f"{i}      | {key}{item_spaces} | ${value:.2f}")
                 menu_items[i] = {"Item name": key, "Price": value}
@@ -134,7 +134,7 @@ while place_order:
 
     # 5. Ask the customer if they would like to order anything else
     keep_ordering = input("\nWould you like to keep ordering? (Y)es or (N)o: ").lower()
-    if keep_ordering == "n":
+    if keep_ordering in ["n", "no"]:
         place_order = False
 
 # Print out the customer's order
@@ -150,7 +150,7 @@ for item in order_list:
     quantity = item["Quantity"]
 
     # 8. Calculate the number of spaces for formatted printing
-    num_item_spaces = 24 - len(item_name)
+    num_item_spaces = 26 - len(item_name)  # Adjusted for consistent spacing
     item_spaces = " " * num_item_spaces
 
     # 9. Print the item name, price, and quantity
